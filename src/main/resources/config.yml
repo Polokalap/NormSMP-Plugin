@@ -43,7 +43,7 @@ settings:
       point:
         name: "§fAbout you:"
         lore1: "§f/ - - - - - - - - - - - - - - - /"
-        lore2: "§f         Pontjaid: §c&c"
+        lore2: "§f         Points: §c&c"
         lore3: "§f/ - - - - - - - - - - - - - - - /"
       level:
         name: "§f&c"
