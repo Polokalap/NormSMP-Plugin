@@ -1,0 +1,19 @@
+name: NormSMP-Plugin
+version: '1.0'
+description: "A Plugin made for the NormSMP by Polokalap!! If you have any plugin ideas that I could make email me! Polokalap@autizm.us"
+website: "https://autizm.us"
+main: mel.Polokalap.normSMPPlugin.NormSMPPlugin
+api-version: '1.21'
+commands:
+  normsmp:
+    description: "Admin command"
+    aliases:
+    - "norm"
+  stats:
+    description: "Opens the stat menu"
+    aliases:
+      - "s"
+permissions:
+  normsmp.admin:
+    description: "The admin permission"
+    default: op
