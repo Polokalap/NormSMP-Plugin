@@ -19,14 +19,14 @@ public class deathListener implements Listener {
 
         if (player.getKiller() instanceof Player killer) {
 
-            if (plugin.getConfig().getInt("data." + player.getUniqueId() + ".points") > 0) {
+            int strength = plugin.getConfig().getInt("data." + player.getUniqueId() + ".strength", 0);
+            int hero = plugin.getConfig().getInt("data." + player.getUniqueId() + ".hero", 0);
+            int protection = plugin.getConfig().getInt("data." + player.getUniqueId() + ".protection", 0);
+            int speed = plugin.getConfig().getInt("data." + player.getUniqueId() + ".speed", 0);
 
-                int strength = plugin.getConfig().getInt("data." + player.getUniqueId() + ".strength", 0);
-                int hero = plugin.getConfig().getInt("data." + player.getUniqueId() + ".hero", 0);
-                int protection = plugin.getConfig().getInt("data." + player.getUniqueId() + ".protection", 0);
-                int speed = plugin.getConfig().getInt("data." + player.getUniqueId() + ".speed", 0);
+            int total = strength + hero + protection + speed;
 
-                int total = strength + hero + protection + speed;
+            if (plugin.getConfig().getInt("data." + player.getUniqueId() + ".points") + total > 0) {
 
                 plugin.getConfig().set("data." + player.getUniqueId() + ".strength", 0);
                 plugin.getConfig().set("data." + player.getUniqueId() + ".hero", 0);
