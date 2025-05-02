@@ -106,7 +106,7 @@ public class GUI {
                 .replaceAll("&c", NormSMPPlugin.getInstance().getConfig().getString("settings.stats.menu.strength.name"))
         );
 
-        if (plugin.getConfig().getInt("data." + player.getUniqueId() + ".strength") < 3 && plugin.getConfig().getInt("data." + player.getUniqueId() + ".points") > 0) {
+        if (plugin.getConfig().getInt("data." + player.getUniqueId() + ".strength") < plugin.getConfig().getInt("settings.max_levels") && plugin.getConfig().getInt("data." + player.getUniqueId() + ".points") > 0) {
 
             ItemStack add = new ItemStack(Material.EMERALD_BLOCK);
             ItemMeta addMeta = add.getItemMeta();
