@@ -29,6 +29,7 @@ public final class NormSMPPlugin extends JavaPlugin {
                         if (getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".hero") == 1)  onlinePlayers.addPotionEffect(new PotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE, 50, 2, true, false));
                         if (getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".hero") == 2)  onlinePlayers.addPotionEffect(new PotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE, 50, 5, true, false));
                         if (getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".hero") == 3)  onlinePlayers.addPotionEffect(new PotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE, 50, 9, true, false));
+                        if (getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".hero") > 3)  onlinePlayers.addPotionEffect(new PotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE, 50, getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".hero") + 14, true, false));
 
                     }
 
@@ -53,6 +54,8 @@ public final class NormSMPPlugin extends JavaPlugin {
 
                         }
 
+                        if (getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".protection") > 3)  onlinePlayers.addPotionEffect(new PotionEffect(PotionEffectType.RESISTANCE, 50, getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".protection") - 1, true, false));
+
                     }
 
                     if (getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".protection") == 0) {
@@ -66,6 +69,8 @@ public final class NormSMPPlugin extends JavaPlugin {
                         if (getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".speed") == 1)  onlinePlayers.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 50, 0, true, false));
                         if (getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".speed") == 2)  onlinePlayers.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 50, 1, true, false));
                         if (getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".speed") == 3)  onlinePlayers.addPotionEffect(new PotionEffect(PotionEffectType.HASTE, 50, 1, true, false));
+                        if (getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".speed") > 3)  onlinePlayers.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 50, getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".speed") - 1, true, false));
+                        if (getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".speed") > 3)  onlinePlayers.addPotionEffect(new PotionEffect(PotionEffectType.HASTE, 50, getConfig().getInt("data." + onlinePlayers.getUniqueId() + ".speed") / 2, true, false));
 
                     }
 
