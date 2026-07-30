@@ -12,7 +12,7 @@ This plugin adds a point system. When you kill someone, they drop a **Norm Point
 - /norm getitem *item* **In the current version, you can only use the "point" item**
 
 # Bug reports
-If you found a bug, feel free to send me an email: **Polokalap@autizm.us**
+If you found a bug, feel free to send me an email: **Polokalap@duck.com**
 
 
 <details>
